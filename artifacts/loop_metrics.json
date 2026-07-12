@@ -1,0 +1,43 @@
+{
+  "n_skus": 30,
+  "rounds": 104,
+  "replications": 20,
+  "real": [
+    "current price",
+    "observed price range",
+    "baseline weekly demand",
+    "Poisson demand noise",
+    "the starting (confounded) belief"
+  ],
+  "simulated": [
+    "demand response at prices never charged \u2014 the counterfactual"
+  ],
+  "start_error": 2.0861296441632544,
+  "end_error": 1.3176611810065642,
+  "results": {
+    "static": {
+      "mean": -3.2136391661303563,
+      "ci_low": -8.285747502248812,
+      "ci_high": 3.1782332722110382,
+      "pct_beats_status_quo": 25.0
+    },
+    "loop": {
+      "mean": -0.5204975040720189,
+      "ci_low": -5.274875345275479,
+      "ci_high": 5.04854111295519,
+      "pct_beats_status_quo": 35.0
+    },
+    "oracle": {
+      "mean": 10.241042038515788,
+      "ci_low": 7.245830552953344,
+      "ci_high": 14.220907721523378,
+      "pct_beats_status_quo": 100.0
+    },
+    "loop_minus_static": {
+      "mean": 2.693141662058337,
+      "ci_low": 0.9464051451257036,
+      "ci_high": 4.806325997561644,
+      "pct_loop_wins": 100.0
+    }
+  }
+}

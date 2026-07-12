@@ -1,0 +1,58 @@
+{
+  "benchmark": {
+    "bijmolt_2005": -2.62,
+    "tellis_1988": -1.76
+  },
+  "eligible_skus": 319,
+  "sku_weeks": 10833,
+  "confounding": {
+    "price_premium_full_book_pct": 6.320806071238061,
+    "n_skus_tested": 319,
+    "mean_corr_price_traffic": 0.06960775214364058,
+    "pct_positive_corr": 63.00940438871473,
+    "avg_price_busiest_weeks": 8.223656294200849,
+    "avg_price_quietest_weeks": 8.032004898530442,
+    "price_premium_in_busy_weeks_pct": 2.386096598440468,
+    "median_units_per_sku_week": 2.0,
+    "pct_sku_weeks_under_3_units": 61.78343949044586
+  },
+  "estimates": {
+    "median": -0.6140436452614159,
+    "pct_negative": 61.87050359712231,
+    "pct_positive": 38.1294964028777,
+    "pct_elastic": 41.007194244604314
+  },
+  "baseline_test": [
+    {
+      "model": "B1  no price effect (e=0)",
+      "held_out_MAE": 1.471,
+      "poisson_deviance": 1.158,
+      "beats_no_price_effect": false
+    },
+    {
+      "model": "B2  literature elasticity (-2.62)",
+      "held_out_MAE": 2.093,
+      "poisson_deviance": 2.266,
+      "beats_no_price_effect": false
+    },
+    {
+      "model": "B3  pooled from our data (-0.42)",
+      "held_out_MAE": 1.456,
+      "poisson_deviance": 1.132,
+      "beats_no_price_effect": true
+    },
+    {
+      "model": "    per-SKU raw estimate",
+      "held_out_MAE": 1.442,
+      "poisson_deviance": 1.153,
+      "beats_no_price_effect": true
+    },
+    {
+      "model": "    per-SKU Bayesian (prior -2.62)",
+      "held_out_MAE": 1.539,
+      "poisson_deviance": 1.263,
+      "beats_no_price_effect": false
+    }
+  ],
+  "pooled_elasticity": -0.4234556142480762
+}

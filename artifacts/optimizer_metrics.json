@@ -1,0 +1,59 @@
+{
+  "assumptions": {
+    "gross_margin": 0.3,
+    "max_move": 0.15,
+    "weeks_per_year": 52
+  },
+  "skus_fitted": 139,
+  "tiers": {
+    "A": 20,
+    "B": 4,
+    "C": 7,
+    "D": 108
+  },
+  "current_contribution": 49696.0,
+  "projected_lift": 1560.0,
+  "lift_low": -135.0,
+  "lift_high": 4258.0,
+  "skus_actioned": 24,
+  "skus_to_test": 115,
+  "skus_broken": 108,
+  "margin_sensitivity": [
+    {
+      "gross_margin": "20%",
+      "total_lift": 1206,
+      "skus_actioned": 24,
+      "pct_same_direction": 67.0
+    },
+    {
+      "gross_margin": "25%",
+      "total_lift": 1163,
+      "skus_actioned": 24,
+      "pct_same_direction": 83.0
+    },
+    {
+      "gross_margin": "30%",
+      "total_lift": 1560,
+      "skus_actioned": 24,
+      "pct_same_direction": 100.0
+    },
+    {
+      "gross_margin": "35%",
+      "total_lift": 2422,
+      "skus_actioned": 24,
+      "pct_same_direction": 92.0
+    },
+    {
+      "gross_margin": "40%",
+      "total_lift": 3662,
+      "skus_actioned": 24,
+      "pct_same_direction": 88.0
+    },
+    {
+      "gross_margin": "50%",
+      "total_lift": 6464,
+      "skus_actioned": 24,
+      "pct_same_direction": 75.0
+    }
+  ]
+}
