@@ -10,14 +10,7 @@ Assess whether transaction history supports useful price decisions, then compare
 
 ## How it works
 
-```mermaid
-flowchart TD
-    N0["Sample elasticity from posterior"] --> N1
-    N1["Choose bounded price"] --> N2
-    N2["Generate simulated demand"] --> N3
-    N3["Update posterior with observations"] --> N4
-    N4["Compare cumulative profit with unchanged pricing"]
-```
+![Implementation mechanism: Sample elasticity from posterior → Choose bounded price → Generate simulated demand → Update posterior with observations → Compare cumulative profit with unchanged pricing](assets/mechanism.svg)
 
 ## Try a small example
 
