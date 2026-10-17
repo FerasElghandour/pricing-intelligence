@@ -99,3 +99,7 @@ The original transaction input is acquired separately as described by the source
 The project shows when to withhold a pricing recommendation and how to compare an experiment policy with an unchanged-price baseline. Deployment requires randomized testing with suitable volume, a justified causal design, approved constraints, monitored margin outcomes, and rollback. The public edition is an analysis and simulation, not an autonomous live-pricing service.
 
 [Portfolio](https://feraselghandour.github.io/) · [Professional inquiries](https://www.linkedin.com/in/feras-elghandour/)
+
+## Reuse
+
+The original contributions listed in [LICENSING.md](LICENSING.md) are available under [MIT](LICENSE). This scoped grant preserves upstream notices and separate dataset, simulator, notebook and checkpoint terms.
