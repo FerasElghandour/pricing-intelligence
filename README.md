@@ -12,6 +12,15 @@ Assess whether transaction history supports useful price decisions, then compare
 
 ![Implementation mechanism: Sample elasticity from posterior → Choose bounded price → Generate simulated demand → Update posterior with observations → Compare cumulative profit with unchanged pricing](assets/mechanism.svg)
 
+
+
+## Reproduce and inspect
+
+The executable reproduction profile now records exact commands, input/source hashes, dependency versions, logs and pass/fail status. Its scope distinguishes behavior checks from full-data benchmarks.
+
+[Commands, artifacts and benchmark scope](BENCHMARKS.md) · [Versioned profiles](reproduction.json)
+
+
 ## Try a small example
 
 A seeded simulated SKU exercises posterior updates. Its invented demand response is not evidence of real-store profit improvement; compare the full recorded experiment with the unchanged-price baseline.

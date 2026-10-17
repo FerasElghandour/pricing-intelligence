@@ -119,11 +119,13 @@ class ElasticityLearner:
     """
 
     def __init__(self, prior_mean_e, prior_sd_e, prior_mean_a, prior_sd_a, noise_sd=NOISE_SD):
+        if not np.isfinite([prior_mean_e,prior_sd_e,prior_mean_a,prior_sd_a,noise_sd]).all() or min(prior_sd_e,prior_sd_a,noise_sd)<=0:raise ValueError('Finite priors and positive noise/scales required')
         self.mu = np.array([prior_mean_a, prior_mean_e], dtype=float)
         self.Sigma = np.diag([prior_sd_a ** 2, prior_sd_e ** 2])
         self.noise_var = noise_sd ** 2
 
     def update(self, price, units):
+        if not np.isfinite([price,units]).all() or price<=0 or units<0:raise ValueError('Positive finite price and nonnegative finite units required')
         x = np.array([1.0, np.log(price)])
         y = np.log(units + 0.5)
         S_inv = np.linalg.inv(self.Sigma)

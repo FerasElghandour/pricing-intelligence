@@ -1,0 +1,23 @@
+{
+  "repository": "pricing-intelligence",
+  "profiles": {
+    "checks": {
+      "scope": "Behavioral numerical regression / gradient and split verification, not a fresh dataset performance result",
+      "commands": [
+        [
+          "{python}",
+          "test_posterior.py"
+        ]
+      ]
+    }
+  },
+  "version_packages": [
+    "numpy",
+    "torch",
+    "pandas",
+    "scikit-learn",
+    "gymnasium",
+    "pytest"
+  ],
+  "external_evidence_limits": "See BENCHMARKS.md and DATA.md. Passing contract checks does not certify historical accuracy, live providers, physical safety or business outcomes."
+}
