@@ -8,6 +8,61 @@ Assess whether transaction history supports useful price decisions, then compare
 
 [![Pricing strategy comparison](assets/demo-preview.png)](https://feraselghandour.github.io/pricing-intelligence/)
 
+## How it works
+
+```mermaid
+flowchart TD
+    N0["Sample elasticity from posterior"] --> N1
+    N1["Choose bounded price"] --> N2
+    N2["Generate simulated demand"] --> N3
+    N3["Update posterior with observations"] --> N4
+    N4["Compare cumulative profit with unchanged pricing"]
+```
+
+## Try a small example
+
+A seeded simulated SKU exercises posterior updates. Its invented demand response is not evidence of real-store profit improvement; compare the full recorded experiment with the unchanged-price baseline.
+
+After the local setup below, run from the repository root:
+
+```sh
+python examples/quickstart.py
+```
+
+The [example source](examples/quickstart.py), [captured output](examples/expected-output.txt) and [execution record](examples/environment.json) keep this demonstration inspectable. Floating-point values may vary with library versions.
+
+Observed output from this run:
+
+```text
+{
+  "fixture": "synthetic 8-round market, no historical benchmark",
+  "first": {
+    "round": 1.0,
+    "e_hat": -0.6192384149072172,
+    "e_sd": 0.6052377665265344,
+    "e_true": -2.5,
+    "price_loop": 11.5,
+    "price_oracle": 11.666666666666666,
+    "cum_status_quo": 42.0,
+    "cum_static": 55.0,
+    "cum_loop": 58.5,
+    "cum_oracle": 65.33333333333333
+  },
+  "last": {
+    "round": 8.0,
+    "e_hat": -0.6727231162150673,
+    "e_sd": 0.5597248183746169,
+    "e_true": -2.5,
+    "price_loop": 12.5,
+    "price_oracle": 11.666666666666666,
+    "cum_status_quo": 465.0,
+    "cum_static": 462.0,
+    "cum_loop": 528.5,
+    "cum_oracle": 438.66666666666663
+  }
+}
+```
+
 ## Problem and implementation
 
 Historical prices can move with demand conditions, making an observed price-sales association unreliable as a causal elasticity estimate. Sparse product sales also limit the information available for experimentation.

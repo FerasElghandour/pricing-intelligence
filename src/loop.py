@@ -34,10 +34,10 @@ SIMULATED (and it has to be — this is THE load-bearing assumption):
 
 WHAT THIS DOES AND DOESN'T PROVE:
   It does NOT prove "these are the right prices for this store."
-  It DOES prove the MECHANISM works: that a system starting from a wrong belief,
-  which sets prices deliberately and updates on what it sees, converges on the truth
-  and beats both (a) doing nothing and (b) trusting the observational estimate.
-  That mechanism is the deliverable. The numbers inside it are a testbed.
+  It exercises posterior updates and compares simulated strategies under the
+  assumed demand response. It does not establish convergence or a profit gain
+  against unchanged pricing. The retained full run is 0.52% below that baseline;
+  see the README for the recorded comparison and its simulation boundary.
 
 ===========================================================================
 THE FOUR STRATEGIES WE RACE
@@ -396,7 +396,7 @@ def plot(curve, H, skus, reps, fname="the_loop.png"):
                 fontsize=10, fontweight="bold")
 
     fig.suptitle("The closed loop: act → observe → learn → re-optimise.  "
-                 "Trusting your data LOSES money. Testing beats it — but only volume buys speed.",
+                 "Simulated demand response; compare profit with the unchanged-price baseline.",
                  fontsize=12)
     fig.tight_layout()
     out = REPORTS / fname
